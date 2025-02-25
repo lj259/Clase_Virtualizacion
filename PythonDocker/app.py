@@ -4,11 +4,11 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():  # put application's code here
+def index():  # put application's code here
     conn = mysql.connector.connect(
-        host="localhost",
+        host="mysql",
         user="root",
-        passwd="",
+        passwd="root",
         database="db"
     )
     cursor = conn.cursor()
